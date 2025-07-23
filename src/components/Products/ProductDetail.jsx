@@ -1,44 +1,44 @@
-import ProductTabs from './ProductTabs';
-import './ProductDetail.css'
-import MainButton from '../MainButton';
 import { useState } from 'react';
+import ProductTabs from './ProductTabs';
+import './ProductDetail.css';
+import MainButton from '../MainButton';
 
 function ProductDetail({ product }) {
-    const [quantity, setQuantity] = useState(1); // початкове значення — 1
+    const [quantity, setQuantity] = useState(1);
+  const [selectedSize, setSelectedSize] = useState(null); // додано
 
     const handleIncrease = () => {
     setQuantity(prev => prev + 1);
     };
 
     const handleDecrease = () => {
-    setQuantity(prev => (prev > 1 ? prev - 1 : 1)); // не менше 1
+    setQuantity(prev => (prev > 1 ? prev - 1 : 1));
     };
-return (
+
+    return (
     <>
-    <div className="product-container">
-    <div className="product-main">
-        <img src={product.imageUrl} alt={product.title} className="product-image" />
-        <div className="product-info">
+        <div className="product-container">
+        <div className="product-main">
+            <img src={product.imageUrl} alt={product.title} className="product-image" />
+            <div className="product-info">
             <h1>{product.title}</h1>
             <p className="price">${product.price}</p>
             <p className="short-desc">{product.description}</p>
 
+            
             <div className="section">
-            <strong>Color:</strong>
-            <div className="colors">
-                {product.colors.map((color, i) => (
-                <span key={i} className="color-dot" style={{ background: color }}></span>
-                ))}
-            </div>
-            </div>
-
-            <div className="section">
-            <strong>Size:</strong>
-            <div className="sizes">
+                <strong>Size:</strong>
+                <div className="sizes">
                 {product.sizes.map((size, i) => (
-                <button key={i} className="size-btn">{size}</button>
+                    <button
+                    key={i}
+                    className={`size-btn ${selectedSize === size ? 'active' : ''}`}
+                    onClick={() => setSelectedSize(size)}
+                    >
+                    {size}
+                    </button>
                 ))}
-            </div>
+                </div>
             </div>
 
             <div className="actions">
@@ -47,8 +47,9 @@ return (
                 <span>{quantity}</span>
                 <button className="quantity-btn" onClick={handleIncrease}>+</button>
                 </div>
+
                 <MainButton text='Add to Cart →' />
-                </div>
+            </div>
             </div>
         </div>
         </div>
@@ -62,4 +63,4 @@ return (
     );
 }
 
-export default ProductDetail
+export default ProductDetail;

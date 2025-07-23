@@ -5,7 +5,7 @@
 }
 
 .product-card {
-    padding: 24px 16px;
+    padding: 24px 25px;
     text-align: center;
     width: 240px;
     display: flex;
@@ -51,5 +51,13 @@
     line-height: 100%;
     text-align: center;
     color: #f83d8e;
+}
+
+.product-title-link {
+    text-decoration: none;
+}
+
+.product-title-link:visited {
+    color: inherit; 
 }
 

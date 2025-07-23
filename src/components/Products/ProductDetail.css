@@ -1,14 +1,14 @@
 .product-container {
     padding-top: 8rem;
-    width: 900px;
+    width: 1200px;
     margin: 25px 135px;
 }
 
 .product-main {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: flex-start;
-    margin-left: 2rem;
+    margin-left: 4rem;
     gap: 6rem;
 }
 
@@ -20,8 +20,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content:space-around;
-    gap: 5px;
+    justify-content:space-between;
+    gap: 20px;
 }
 .product-info h1 {
     font-family: var(--font-family);
@@ -29,32 +29,18 @@
     font-size: 30px;
     line-height: 100%;
     color: #212529;
-    margin-bottom: 1rem;
 }
 
 .price {
     font-size: 1.5rem;
     color: #683292;
     font-family: var(--font-family);
-}
-
-.section {
-    margin-top: 1rem;
-}
-
-.colors .color-dot {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin-right: 5px;
-    border: 3px solid #ccc;
-    cursor: pointer;
+    font-weight: bold;
 }
 
 .sizes .size-btn {
     padding: 5px 10px;
-    margin-right: 5px;
+    margin: 10px 5px;
     cursor: pointer;
     background: transparent;
     border: 1px solid #e8edf1;
@@ -63,11 +49,21 @@
     height: 43px;
 }
 
+.size-btn:hover {
+    border-color: #888;
+}
+
+.size-btn.active {
+    background-color: #F83D8E;
+    color: white;
+    border-color: #F83D8E;
+}
+
+
 .actions {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-top: 16px;
 }
 
 .quantity-btn {
