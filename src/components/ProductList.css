@@ -1,0 +1,29 @@
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Пагінація */
+.pagination {
+    text-align: center;
+    margin: 1.5rem;
+}
+
+.pagination button {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination button.active,
+.pagination button:hover {
+    background-color: #F83D8E;
+    color: white;
+    border-color: #F83D8E;
+}

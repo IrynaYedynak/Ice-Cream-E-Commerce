@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.art-section {
+    position: relative; /* Дуже важливо! Щоб фігури позиціонувались відносно цієї секції */
+    width: 100%;
+    height: 72vh;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    transform: translateY(40px) scale(0.8) rotate(-45deg);
+    transition: all 1s ease-out;
+    }
+
+.art-section.visible .shape {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+}
+
+.shape-dots {
+    top: 12%;
+    left: 17%;
+    width: 40px;
+    transform: translateY(40px) scale(0.8) rotate(-30deg);
+    transition-delay: 0.2s;
+    }
+
+.shape-triangle {
+    top: 30%;
+    right: 10%;
+    width: 35px;
+    transform: translateY(40px) scale(0.8) rotate(-90deg);
+    transition-delay: 0.4s;
+    }
+
+.shape-circle {
+    top: 20%;
+    left: 5%;
+    width: 60px;
+    transform: translateY(40px) scale(0.8) rotate(-60deg);
+    transition-delay: 0.5s;
+    }
+
+.shape-half {
+    bottom: -10px;
+    right: 5%;
+    width: 120px;
+}
+
+.art-decription {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;     
+    padding: 0 4rem 0 3rem;
+}
+
+.art-picture{
+    width: min(500px, 35vw);
+    max-height: 600px;
+    object-fit: contain;
+}
+
+.banner-text h2 {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 75px;
+    color: hsl(210, 11%, 15%);
+}
+
+.banner-text h2 span {
+    color:#f83d8e ;
+}

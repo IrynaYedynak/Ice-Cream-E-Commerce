@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.subscribe-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.triangle-shape {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 35px;
+}
+
+.circle-shape {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 35px;
+}
+
+.email-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 700px;
+    margin: auto 0;
+    text-align: center;
+}
+
+.email-box h2 {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 50px;
+    color: #212529;
+    padding: 35px;
+}
+
+.email-box h2 span {
+    color:#f83d8e;
+}
+
+.email-box p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 17px;
+    color: #696969;
+}
+
+.email-input {
+    width: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 25px;
+}
+
+.email-input input {
+    box-shadow: 0 2px 73px 2px rgba(0, 0, 0, 0.05);
+    background: #fff;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    width: 350px;
+}
+
+input:focus {
+    border-color: #f83d8e; 
+    outline: none; /* прибирає синю рамку браузера */
+}
+
+.checkbox-label {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+}
+
+.checkbox-label input {
+    width: 20px;
+    height: 20px;
+    accent-color: #ff3399; 
+}
+
+.checkbox-label p {
+    font-family: var(--font-family)
+}
+
+.checkbox-label p span {
+    color: #f83d8e;
+    cursor: pointer;
+    text-decoration: underline;
+}

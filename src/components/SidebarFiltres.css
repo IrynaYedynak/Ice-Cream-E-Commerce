@@ -1,0 +1,132 @@
+.sidebar {
+    width: 250px;
+    padding: 2rem;
+    border-radius: 16px;
+    font-family: var(--font-family);
+}
+
+.sidebar input[type="search"]:focus {
+    outline: none;
+    border-color:  #F83D8E;
+    box-shadow: 0 0 5px rgba(244, 143, 177, 0.4);
+}
+
+.filter-group {
+    margin-bottom: 2rem;
+}
+
+.filter-group h4 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.filter-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-group li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    color: #8c8585;
+}
+
+.filter-group input[type="checkbox"] {
+    margin-right: 0.6rem;
+    accent-color:  #F83D8E;
+}
+
+input[type="range"] {
+    appearance: none;         /* ✅ стандартна */
+    -webkit-appearance: none; /* ✅ для Safari / Chrome */
+    width: 100%;
+    height: 6px;
+    background: #ffd6e8; /* рожевий трек */
+    border-radius: 5px;
+    outline: none;
+    margin: 10px 0;
+}
+
+/* Трек */
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 6px;
+    background: #ffd6e8;
+    border-radius: 5px;
+}
+
+/* Повзунок */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #ff69b4; /* яскраво-рожевий thumb */
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -5px; /* центрує thumb по треку */
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-track {
+    height: 6px;
+    background: #ffd6e8;
+    border-radius: 5px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #ff69b4;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Edge */
+input[type="range"]::-ms-track {
+    height: 6px;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type="range"]::-ms-fill-lower {
+    background: #ffd6e8;
+    border-radius: 5px;
+}
+
+input[type="range"]::-ms-fill-upper {
+    background: #ffd6e8;
+    border-radius: 5px;
+}
+
+    input[type="range"]::-ms-thumb {
+    width: 16px;
+    height: 16px;
+    background: #ff69b4;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.filter-group span {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color:  #a8a8a8;
+}
+
+.filter-group:not(:last-child) {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+
+.filter-group h4 {
+    font-family: var(--second-family);
+    font-weight: 400;
+}

@@ -1,0 +1,50 @@
+.featured-products {
+    margin-top: 20px;
+}
+
+.featured-products h4 {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.featured-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.featured-item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.featured-item {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    display: flex;
+}
+
+.featured-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.prices {
+    font-size: 0.9rem;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.new-price {
+    color: #e91e63;
+    font-weight: bold;
+}

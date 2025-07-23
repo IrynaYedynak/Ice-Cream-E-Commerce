@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; 
+    background: transparent; 
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo {
+display: flex;
+align-items: center;
+gap: 8px;
+margin-bottom: 0;
+text-decoration: none;
+}
+
+.logo img {
+width: 40px;
+height: auto;
+}
+
+.logo-text {
+font-family: var(--second-family);
+font-size: 24px;
+font-weight: bold;
+}
+
+.logo-text-main {
+color: #f83d8e;
+}
+
+.logo-text-second {
+color: #77449c;
+}
+
+.nav {
+display: flex;
+gap: 20px;
+}
+
+.nav a {
+text-decoration: none;
+color: #333;
+font-size:  16px;
+font-family: var(--font-family);
+font-weight: 400;
+}
+
+.nav a:hover {
+color: #F83D8E;
+}
+
+.nav a:first-child {
+color: #F83D8E;
+}
+
+.actions {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.icon-button {
+background: none;
+border: none;
+cursor: pointer;
+padding: 8px;
+position: relative;
+display: flex;
+align-items: center;
+}
+
+.icon-button svg {
+width: 24px;
+height: 25px;
+fill: #444;
+transition: 0.3s;
+}
+
+.icon-button:hover svg {
+fill: #F83D8E;
+}
+
+/* === Бейдж на кошику === */
+.cart .badge {
+position: absolute;
+top: -7px;
+right: -4px;
+background: purple;
+color: white;
+font-size: 10px;
+padding: 3px 5px;
+border-radius: 10px;
+font-weight: bold;
+min-width: 16px;
+text-align: center;
+line-height: 1;
+}

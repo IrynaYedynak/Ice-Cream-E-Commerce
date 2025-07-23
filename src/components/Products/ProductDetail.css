@@ -1,0 +1,106 @@
+.product-container {
+    padding-top: 8rem;
+    width: 900px;
+    margin: 25px 135px;
+}
+
+.product-main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 2rem;
+    gap: 6rem;
+}
+
+.product-image {
+    width: 250px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:space-around;
+    gap: 5px;
+}
+.product-info h1 {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 100%;
+    color: #212529;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #683292;
+    font-family: var(--font-family);
+}
+
+.section {
+    margin-top: 1rem;
+}
+
+.colors .color-dot {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+    border: 3px solid #ccc;
+    cursor: pointer;
+}
+
+.sizes .size-btn {
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #e8edf1;
+    border-radius: 43px;
+    width: 43px;
+    height: 43px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.quantity-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.quantity-btn:hover {
+    background-color: #f2f2f2;
+    border-radius: 50%;
+}
+
+.actions span {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    user-select: none;
+}
+
+/* Обгортка для +/- і числа */
+.actions .quantity-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 999px;
+    overflow: hidden;
+}

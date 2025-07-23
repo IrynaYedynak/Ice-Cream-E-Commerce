@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Berkshire+Swash&display=swap');
+
+:root {
+    --font-family: "Archivo", sans-serif;
+    --second-family: "Berkshire Swash", sans-serif;
+}
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem; 
+}
+
+.banner-text h3 {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    color: #0f0200;       
+}
+
+.banner-text h1 {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 90px;
+    color: #212529;
+}
+
+.banner-text h1 span {
+    color:#f83d8e ;
+}
+
+.banner-text p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 22px;
+    color: #0f0200;
+}

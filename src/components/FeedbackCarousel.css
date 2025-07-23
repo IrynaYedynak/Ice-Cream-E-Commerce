@@ -1,0 +1,114 @@
+/* TestimonialsCarousel.css */
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+}
+
+.carousel-box{
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.feedback-box {
+    position: relative;          
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0;
+    
+}
+
+.carousel-title {
+    font-size: 52px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    padding: 35px;
+}
+
+.carousel-title span {
+    color: #ec4899;
+}
+
+.background-image {
+    position: absolute;
+    inset: 0;                    /* top:0; right:0; bottom:0; left:0; */
+    display: flex;
+    justify-content: center;     
+    align-items: start;               
+    pointer-events: none;        
+    z-index: 1;                  
+}
+
+.background-image img {
+    max-width: 45vmin;          
+    height: auto;
+}
+
+.feedback-text-review {
+    margin-top: 45px;
+}
+.feedback-text-review,
+.stars {
+    position: relative;
+    z-index: 2;                 
+}
+
+.feedback-text {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 50px;
+    
+}
+
+
+.name {
+    color: #ec4899;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 4px 0;
+}
+
+.role {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.stars svg {
+    width: 20px;
+    height: 20px;
+    margin: 0 2px;
+}
+
+.dots {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.dot.active {
+    background-color: #ec4899;
+    transform: scale(1.2);
+}
