@@ -26,8 +26,9 @@ function Header() {
                 <a href="#">FAQ’s</a>
             </nav>
 
-            <div className="actions">
+            <div className="actions-header">
                 <SearchBar />
+                <Link to='/cart'>
                 <button className="icon-button cart">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -59,6 +60,8 @@ function Header() {
 
             <div className="badge">0</div> {/* ← кількість товарів */}
         </button>
+                </Link>
+                
         <MainButton text="Contact us →" color='pink' />
         </div>
         </header>

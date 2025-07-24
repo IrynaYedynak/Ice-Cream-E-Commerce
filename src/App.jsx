@@ -6,6 +6,7 @@ import Layout from "./layout/Layout";
 import Modal from "./components/Modal";
 import ProductPage from "./components/Products/ProductPage";
 import ProductCatalog from "./components/ProductCatalog";
+import CartPage from "./components/Cart/CartPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="contact" element={<Contacts />} />
           <Route path="/product/:id" element={<ProductPage />} />
           <Route path="/shop" element={<ProductCatalog />} />
+          <Route path="/cart" element={<CartPage />} />
         </Route>
       </Routes>
       <Modal /> 
