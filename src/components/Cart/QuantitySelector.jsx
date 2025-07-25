@@ -1,3 +1,4 @@
+import './QuantitySelector.css'
 
 const QuantitySelector = ({ quantity, onChange }) => {
     return (

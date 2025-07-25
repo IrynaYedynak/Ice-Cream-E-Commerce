@@ -1,5 +1,6 @@
 import QuantitySelector from "./QuantitySelector"
 import RemoveIcon from "../../assets/images/remove-icon.svg"
+import './CartItem.css'
 
 function CartItem({ item, onQuantityChange, onRemove }) {
 

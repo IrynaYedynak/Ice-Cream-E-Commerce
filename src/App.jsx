@@ -7,10 +7,11 @@ import Modal from "./components/Modal";
 import ProductPage from "./components/Products/ProductPage";
 import ProductCatalog from "./components/ProductCatalog";
 import CartPage from "./components/Cart/CartPage";
+import CartProvider from "./components/Cart/CartContext";
 
 function App() {
   return (
-    <>
+    <CartProvider>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -21,9 +22,10 @@ function App() {
           <Route path="/cart" element={<CartPage />} />
         </Route>
       </Routes>
-      <Modal /> 
-    </>
+      <Modal />
+    </CartProvider>
   );
 }
+
 
 export default App;

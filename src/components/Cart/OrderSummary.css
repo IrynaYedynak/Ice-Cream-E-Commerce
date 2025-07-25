@@ -1,0 +1,37 @@
+.order-summary {
+    flex: 1;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    height: fit-content;
+}
+
+.order-summary h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    color: #333;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #d32f2f;
+}
+
+.secure-text {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 1rem;
+    text-align: center;
+    line-height: 1.4;
+}
