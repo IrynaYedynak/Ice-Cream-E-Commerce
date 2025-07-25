@@ -1,17 +1,19 @@
-import { createContext, useState, useContext, useEffect } from "react";
-import axios from "axios";
+import { createContext, useState, useEffect } from "react";
 
-const CartContext = createContext();
+// Створюємо контекст
+export const CartContext = createContext();
 
 function CartProvider({ children }) {
     const [cartItems, setCartItems] = useState([]);
 
     async function fetchCartItems() {
         try {
-            const response = await axios.get("http://localhost:3000/cartItems");
-            setCartItems(response.data);
+            const response = await fetch("http://localhost:3000/cartItems");
+            if (!response.ok) throw new Error("Failed to fetch cart items");
+            const data = await response.json();
+            setCartItems(data);
         } catch (err) {
-            console.error("Failed to load cart items", err);
+            console.error(err);
         }
     }
 
@@ -39,10 +41,3 @@ function CartProvider({ children }) {
 }
 
 export default CartProvider;
-
-export function useCart() {
-    return useContext(CartContext);
-}
-
-
-
