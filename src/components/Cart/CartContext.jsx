@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 
-// Створюємо контекст
+// Створюється контекст
 export const CartContext = createContext();
 
 function CartProvider({ children }) {
@@ -8,7 +8,7 @@ function CartProvider({ children }) {
 
     async function fetchCartItems() {
         try {
-            const response = await fetch("http://localhost:3000/cartItems");
+            const response = await fetch("http://localhost:3000/products");
             if (!response.ok) throw new Error("Failed to fetch cart items");
             const data = await response.json();
             setCartItems(data);

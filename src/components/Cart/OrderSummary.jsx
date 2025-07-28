@@ -12,7 +12,9 @@ const OrderSummary = () => {
     return (
         <div className="order-summary">
             <h3>Order Summary</h3>
-            <div className="summary-row">
+            <div className="product-details">
+                <h4>Product Details:</h4>
+                <div className="summary-row">
                 <span>Sub Total:</span>
                 <span>${subTotal.toFixed(2)}</span>
             </div>
@@ -20,12 +22,15 @@ const OrderSummary = () => {
                 <span>Shipping:</span>
                 <span>${shipping.toFixed(2)}</span>
             </div>
+            </div>
             <div className="summary-row total">
                 <span>Grand Total:</span>
                 <span>${grandTotal.toFixed(2)}</span>
             </div>
             <MainButton 
             text='Proceed to checkout →'
+            color="pink"
+            className="checkout-btn"
             />
             <p className="secure-text">Safe and Secure Payments, Easy Returns.<br/>100% Authentic Products</p>
         </div>

@@ -25,7 +25,10 @@ function ProductCard ({ id, image, title, price, rating }) {
             </h3>
 
             <p>${price}</p>
-            <MainButton text="Add to Cart →" color='pink'/>
+            <MainButton 
+            text="Add to Cart →" 
+            color='pink'
+            />
         </div>
     )
 }

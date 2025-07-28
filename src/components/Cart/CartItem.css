@@ -5,7 +5,7 @@
     gap: 0.75rem;
     align-items: center;
     padding: 1rem 0;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid rgb(219, 215, 215); 
 }
 
 .cart-item-image {
