@@ -4,9 +4,15 @@ import '../index.css'
 import SearchBar from './SearchBar';
 import MainButton from './MainButton';
 import { Link } from 'react-router-dom';
+import { useCart } from './Cart/useCart';
 
 
 function Header() {
+
+    const { cartItems } = useCart();
+
+    const totalItems = cartItems.length; 
+
     return (
         <header className="header">
             <Link to="/" className="logo">
@@ -58,7 +64,9 @@ function Header() {
                         C20.0049 22.1046 19.1095 23 18.0049 23Z" />
                     </svg>
 
-            <div className="badge">0</div> {/* ← кількість товарів */}
+            {totalItems > 0 && (
+                            <div className="badge">{totalItems}</div>
+                        )}
         </button>
                 </Link>
                 

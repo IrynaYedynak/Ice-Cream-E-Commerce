@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Contacts from "./pages/contacts";
 import Layout from "./layout/Layout";
 import Modal from "./components/Modal";
+import ModalProvider from "./components/ModalContext";
 import ProductPage from "./components/Products/ProductPage";
 import ProductCatalog from "./components/ProductCatalog";
 import CartPage from "./components/Cart/CartPage";
@@ -11,6 +12,7 @@ import CartProvider from "./components/Cart/CartContext";
 
 function App() {
   return (
+    <ModalProvider>
     <CartProvider>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -24,6 +26,7 @@ function App() {
       </Routes>
       <Modal />
     </CartProvider>
+    </ModalProvider>
   );
 }
 

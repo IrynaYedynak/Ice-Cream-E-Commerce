@@ -2,10 +2,31 @@ import { useState } from 'react';
 import ProductTabs from './ProductTabs';
 import './ProductDetail.css';
 import MainButton from '../MainButton';
+import { useCart } from '../Cart/useCart';
 
 function ProductDetail({ product }) {
     const [quantity, setQuantity] = useState(1);
-  const [selectedSize, setSelectedSize] = useState(null); // додано
+    const [selectedSize, setSelectedSize] = useState(null); // додано
+    const {addToCart} = useCart();
+
+    const handleAddToCart = () => {
+    if (!selectedSize) {
+        alert("Будь ласка, виберіть розмір");
+        return;
+    }
+
+    const itemToAdd = {
+        id: product.id,
+        title: product.title,
+        image: product.imageUrl,
+        price: product.price,
+        size: selectedSize,
+        quantity: quantity
+    };
+
+    addToCart(itemToAdd); // додасть до корзини і покаже модалку
+};
+
 
     const handleIncrease = () => {
     setQuantity(prev => prev + 1);
@@ -42,13 +63,16 @@ function ProductDetail({ product }) {
             </div>
 
             <div className="actions">
-                <div className="quantity-wrapper">
+                <div className="quantity-wrap">
                 <button className="quantity-btn" onClick={handleDecrease}>-</button>
                 <span>{quantity}</span>
                 <button className="quantity-btn" onClick={handleIncrease}>+</button>
                 </div>
 
-                <MainButton text='Add to Cart →' />
+                <MainButton 
+                text='Add to Cart →' 
+                onClick={handleAddToCart}
+                />
             </div>
             </div>
         </div>

@@ -3,7 +3,7 @@ import TriangleShape from '../../assets/images/shapes/triangle.svg';
 import CircleShape from '../../assets/images/shapes/circle-pink.svg';
 import MainButton from '../MainButton';
 import './SubscribeSection.css';
-import useModal from '../useModal';
+import useModal from '../UseModal';
 
 function SubscribeSection() {
     const { openModal } = useModal();

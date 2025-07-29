@@ -3,8 +3,24 @@ import MainButton from "./MainButton";
 import './ProductCard.css'
 import '../index.css'
 import RatingStar from '../assets/images/rateStar.svg'
+import { useCart } from './Cart/useCart';
 
 function ProductCard ({ id, image, title, price, rating }) {
+    const { addToCart } = useCart();
+
+    const handleAddToCart = () => {
+        const product = {
+            id,
+            title,
+            price,
+            image,
+            quantity: 1,
+            size: 'S'
+        };
+
+        addToCart(product);
+    };
+
     return (
         <div className="product-card">
             <div className="card-image">
@@ -28,6 +44,7 @@ function ProductCard ({ id, image, title, price, rating }) {
             <MainButton 
             text="Add to Cart →" 
             color='pink'
+            onClick={handleAddToCart}
             />
         </div>
     )

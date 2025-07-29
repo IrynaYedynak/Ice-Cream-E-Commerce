@@ -1,4 +1,4 @@
-import useModal from './useModal';
+import useModal from './UseModal';
 import './Modal.css'
 import MainButton from './MainButton';
 

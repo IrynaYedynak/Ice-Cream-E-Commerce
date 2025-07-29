@@ -9,10 +9,10 @@ const CartPage = () => {
     return (
         <div className="cart-page">
             <div className="cart-items-list">
-                <h2>Shopping Cart ({cartItems.length} Items)</h2>
+                <h2>Shopping Cart ({cartItems.length} Item)</h2>
                 {cartItems.map(item => (
                     <CartItem
-                        key={item.id}
+                        key={`${item.id}-${item.size || ''}`}
                         item={item}
                         onQuantityChange={updateQuantity}
                         onRemove={removeItem}
