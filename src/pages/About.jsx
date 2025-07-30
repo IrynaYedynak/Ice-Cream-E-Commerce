@@ -1,5 +1,11 @@
+import AboutUsMain from "../components/AboutUs/AboutUsMainSection"
+
 function About() {
-    return <h1>Про нас</h1>;
+    return(
+        <>
+        <AboutUsMain />
+        </>
+    )
 }
 
 export default About
