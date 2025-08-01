@@ -1,8 +1,8 @@
 import ProductCard from "../ProductCard";
-import GelatoImage from '../../assets/images/flavor-image1.svg'
 import './ArtisanFlavors.css'
 import '../../index.css'
-import ProductCarousel from "../ProductCarousel";
+import Carousel from "../Carousel";
+import products from "../Products";
 
 function ArtisanFlavors() {
     return (
@@ -11,9 +11,13 @@ function ArtisanFlavors() {
         <h2>Our <span>Artisan Gelato </span> Flavors</h2>
         <p>Check out our selection of artisanal gelato flavors</p>
     </div>
-    <ProductCarousel />
+    <Carousel 
+        items={products} 
+        CardComponent={ProductCard} 
+        cardsToShow={3} 
+    />
+    
     </section>
     )
 }
-
 export default ArtisanFlavors
