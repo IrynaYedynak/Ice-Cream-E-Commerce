@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './Carousel.css'; // або зроби окремий css для Carousel
+import './Carousel.css'; 
 
 
 function Carousel({ items, CardComponent, cardsToShow = 3 }) {
