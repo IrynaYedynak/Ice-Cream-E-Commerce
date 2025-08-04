@@ -1,6 +1,7 @@
 import Facebooksymb from "../../assets/images/Symbol-facebook.svg"
 import Instagramsymb from "../../assets/images/Symbol-instagram.svg"
 import Youtubesymb from "../../assets/images/Symbol-youtube.svg"
+import './TeamMemberCard.css'
 
 
 function TeamMemberCard( { image, name, role } ) {
@@ -15,9 +16,12 @@ function TeamMemberCard( { image, name, role } ) {
                 <p>{role}</p>
             </div>
             <div className="member-socials">
-                <img src={Facebooksymb} alt="symbol" />
-                <img src={Instagramsymb} alt="symbol" />
-                <img src={Youtubesymb} alt="symbol" />
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                <img src={Facebooksymb} alt="symbol" /></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                <img src={Instagramsymb} alt="symbol" /></a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"> 
+                <img src={Youtubesymb} alt="symbol" /></a>
             </div>
         </div>
     )

@@ -1,0 +1,74 @@
+.limited-offer-section {
+    position: relative; /* Обов’язково, щоб позиціонувати фігури всередині */
+    width: 100%;
+    height: 72vh;
+    overflow: hidden;
+    background: #f83d8e;
+}
+
+.background-images-limited {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.left-dots {
+    position: absolute;
+    top: 25%;
+    left: 28%;
+    width: 100px;
+}
+
+.right-wave {
+    position: absolute;
+    bottom: 25%;
+    right: 30%;
+    width: 70px;
+}
+
+.main-content-limited {
+    position: relative;
+    z-index: 1; /* Щоб бути поверх фігур */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.left-image-limited img ,
+.right-image-limited img
+{
+    width: 415px;
+    height: 400px;
+}
+
+.text-content-limited {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.text-content-limited h1 {
+    font-family: var(--second-family);
+    font-weight: 300;
+    font-size: 75px;
+    color: hsl(0, 0%, 100%);
+}
+
+.text-content-limited p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+
+

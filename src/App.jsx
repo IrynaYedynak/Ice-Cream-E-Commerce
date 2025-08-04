@@ -9,6 +9,7 @@ import ProductPage from "./components/Products/ProductPage";
 import ProductCatalog from "./components/ProductCatalog";
 import CartPage from "./components/Cart/CartPage";
 import CartProvider from "./components/Cart/CartContext";
+import FAQS from "./pages/FAQS";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/product/:id" element={<ProductPage />} />
           <Route path="/shop" element={<ProductCatalog />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/faqs" element={<FAQS />} />
         </Route>
       </Routes>
       <Modal />
