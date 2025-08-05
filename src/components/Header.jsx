@@ -69,7 +69,9 @@ function Header() {
         </button>
                 </Link>
                 
-        <MainButton text="Contact us →" color='pink' />
+                <Link to='/contacts'>
+                <MainButton text="Contact us →" color='pink' />
+                </Link>
         </div>
         </header>
     )

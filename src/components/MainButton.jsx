@@ -1,9 +1,9 @@
 import './MainButton.css'
 
-function MainButton({ text, color = 'pink', className = "", onClick }) {
+function MainButton({ text, color = 'pink', className = "", onClick, type = 'button' }) {
     return (
     <button
-        type="button"
+        type={type}
         className={`contact-button ${color} ${className}`}
         onClick={onClick}
     >
