@@ -2,6 +2,7 @@ import './AboutUsMainSection.css'
 import AboutUsMainImg from "../../assets/images/about-us-main-image.png"
 import AboutUsBackground from "../../assets/images/icecream-special-rightimage.svg"
 import MainButton from '../MainButton'
+import { Link } from 'react-router-dom'
 
 function AboutUsMain() {
     return(
@@ -25,10 +26,12 @@ function AboutUsMain() {
             <br />
             their perfect scoop.
             </p>
+            <Link to='/'>
             <MainButton 
             text="Read more →"
             color='pink'
             />
+            </Link>
             </div>
             <div className="about-us-main-background">
                 <img src={AboutUsBackground} alt="ice-cream" />

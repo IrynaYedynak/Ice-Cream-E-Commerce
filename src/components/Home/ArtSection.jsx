@@ -7,6 +7,7 @@ import ArtPicture from '../../assets/images/artpicture.svg'
 import './ArtSection.css'
 import '../../index.css'
 import MainButton from '../MainButton'
+import { Link } from "react-router-dom";
 
 
 
@@ -38,7 +39,9 @@ function ArtSection() {
                         <h2>Experience the   <br /> Art of <span>Gelato</span></h2>
                         <p>Handcrafted Flavors with Fresh, Local Ingredients.</p>
                         <p>Enjoy gelato made with the finest ingredients and <br /> traditional techniques.</p>
+                        <Link to='/shop' >
                         <MainButton text="See Our Gelato Menu → " color='pink' className='banner-button'/>
+                        </Link>
                     </div>
             </div>
             <img src={TriangleImage} className="shape shape-triangle" alt="triangle" />

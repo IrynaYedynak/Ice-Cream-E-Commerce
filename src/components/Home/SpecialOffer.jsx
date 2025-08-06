@@ -5,6 +5,7 @@ import Triangle from '../../assets/images/shapes/triangle.svg'
 import Cross from '../../assets/images/shapes/mission-cross.svg'
 import ZigZag from '../../assets/images/shapes/mission-wave.svg'
 import './SpecialOffer.css'
+import { Link } from 'react-router-dom'
 
 function SpecialOffer() {
     const sectionRef = useRef(null);
@@ -33,7 +34,9 @@ function SpecialOffer() {
             <div className="section-text">
                 <h1>Gelato Lovers’ Special!</h1>
                 <p>Buy Any Two Gelato Pints, Get One <span>Free!</span></p>
+                <Link to='/shop'>
                 <MainButton text='Claim Offer →'/>
+                </Link>
             </div>
             <img src={ZigZag} alt="zigzag" className="shape-special shape-zigzag" />
 

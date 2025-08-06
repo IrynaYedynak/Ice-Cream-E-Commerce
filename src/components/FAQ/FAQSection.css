@@ -25,11 +25,9 @@
 }
 
 .faq-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 16px;
-    padding-bottom: 25px;
-    align-self: start;
+    column-count: 2;
+    column-gap: 16px;
+    break-inside: avoid;
 }
 
 .faq-item {
@@ -39,7 +37,9 @@
     cursor: pointer;
     background-color: #fafafa;
     transition: background 0.3s, border 0.3s;
-    align-self: start;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 16px;
 }
 
 .faq-item:hover {

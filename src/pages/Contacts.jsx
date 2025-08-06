@@ -1,5 +1,13 @@
+import ContactUsMain from "../components/Contacts/ContactUsMain";
+import GoogleMap from "../components/Contacts/GoogleMap";
+
 function Contacts() {
-    return <h1>Контакти</h1>;
+    return(
+        <>
+        <ContactUsMain />
+        <GoogleMap />
+        </>
+    )
 }
 
 export default Contacts
