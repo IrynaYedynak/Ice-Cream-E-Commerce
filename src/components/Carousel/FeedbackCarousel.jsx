@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './FeedbackCarousel.css'
-import QuoteImg from '../assets/images/quote-image.svg'
+import QuoteImg from '../../assets/images/quote-image.svg'
 
 //додати таймер, щоб карусель сама крутилась
 const customers = [

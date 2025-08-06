@@ -6,7 +6,7 @@ import Avatar5 from '../../assets/images/customer-avatar5.svg'
 import Avatar6 from '../../assets/images/customer-avatar6.svg'
 import Avatar7 from '../../assets/images/customer-avatar7.svg'
 import Avatar8 from '../../assets/images/customer-avatar8.svg'
-import FeedbackCarousel from '../FeedbackCarousel'
+import FeedbackCarousel from '../Carousel/FeedbackCarousel'
 import './FeedbackSection.css'
 
 

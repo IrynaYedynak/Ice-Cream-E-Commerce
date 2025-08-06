@@ -1,10 +1,10 @@
-import GelatoImage2 from '../assets/images/flavor-image2.svg'
-import GelatoImage3 from '../assets/images/flavor-image3.svg'
-import GelatoImage4 from '../assets/images/flavor-image4.svg'
-import GelatoImage5 from '../assets/images/product-image2.svg'
-import GelatoImage7 from '../assets/images/product-image4.svg'
-import GelatoImage8 from '../assets/images/product-image5.svg'
-import GelatoImage9 from '../assets/images/product-image6.svg'
+import GelatoImage2 from '../../assets/images/flavor-image2.svg'
+import GelatoImage3 from '../../assets/images/flavor-image3.svg'
+import GelatoImage4 from '../../assets/images/flavor-image4.svg'
+import GelatoImage5 from '../../assets/images/product-image2.svg'
+import GelatoImage7 from '../../assets/images/product-image4.svg'
+import GelatoImage8 from '../../assets/images/product-image5.svg'
+import GelatoImage9 from '../../assets/images/product-image6.svg'
 
 const products = [
     {

@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';  // імпорт Link
-import MainButton from "./MainButton";
+import MainButton from '../MainButton';
 import './ProductCard.css'
-import '../index.css'
-import RatingStar from '../assets/images/rateStar.svg'
-import { useCart } from './Cart/useCart';
+import '../../index.css'
+import RatingStar from '../../assets/images/rateStar.svg'
+import { useCart } from '../Cart/useCart';
 
 function ProductCard ({ id, image, title, price, rating }) {
     const { addToCart } = useCart();

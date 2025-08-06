@@ -1,8 +1,8 @@
-import ProductCard from "../ProductCard";
+import ProductCard from "../ShopCatalog/ProductCard";
 import './ArtisanFlavors.css'
 import '../../index.css'
-import Carousel from "../Carousel";
-import products from "../Products";
+import Carousel from "../Carousel/Carousel";
+import products from "../ShopCatalog/Products";
 
 function ArtisanFlavors() {
     return (

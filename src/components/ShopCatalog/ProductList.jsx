@@ -1,4 +1,4 @@
-import ProductCard from "./ProductCard";
+import ProductCard from './ProductCard';
 import './ProductList.css';
 
 function ProductList({ products, totalPages, currentPage, onPageChange }) {

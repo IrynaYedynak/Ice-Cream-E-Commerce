@@ -1,7 +1,7 @@
 import './Header.css'
 import LogoImage from '../assets/images/logo_header.svg';
 import '../index.css'
-import SearchBar from './SearchBar';
+import SearchBar from './ShopCatalog/SearchBar';
 import MainButton from './MainButton';
 import { Link } from 'react-router-dom';
 import { useCart } from './Cart/useCart';
@@ -22,7 +22,6 @@ function Header() {
                 <span className="logo-text-second">Tales</span>
                 </div>
             </Link>
-
 
             <nav className='nav'>
                 <a href="/">Home</a>

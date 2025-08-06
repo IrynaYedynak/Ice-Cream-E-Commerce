@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import useModal from '../UseModal';
+import useModal from '../Modal/useModal';
 import './ContactForm.css';
 import MainButton from '../MainButton';
 

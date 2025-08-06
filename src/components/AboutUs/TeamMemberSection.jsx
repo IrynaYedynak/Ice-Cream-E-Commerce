@@ -1,7 +1,7 @@
 import "./TeamMemberSection.css"
 import TeamMemberCard from "./TeamMemberCard"
 import members from "./members"
-import Carousel from "../Carousel"
+import Carousel from "../Carousel/Carousel"
 
 function TeamMemberSection() {
     return (

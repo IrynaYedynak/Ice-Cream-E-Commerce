@@ -1,9 +1,9 @@
 import './FeaturedProducts.css';
 import { Link } from 'react-router-dom';
-import GelatoImage1 from '../assets/images/flavor-image1.svg';
-import GelatoImage2 from '../assets/images/flavor-image2.svg';
-import GelatoImage3 from '../assets/images/flavor-image3.svg';
-import GelatoImage4 from '../assets/images/flavor-image4.svg';
+import GelatoImage1 from '../../assets/images/flavor-image1.svg';
+import GelatoImage2 from '../../assets/images/flavor-image2.svg';
+import GelatoImage3 from '../../assets/images/flavor-image3.svg';
+import GelatoImage4 from '../../assets/images/flavor-image4.svg';
 
 const featuredItems = [
     { id: 1, name: "Pistachio", oldPrice: 9.8, newPrice: 4.99, img: GelatoImage4 },

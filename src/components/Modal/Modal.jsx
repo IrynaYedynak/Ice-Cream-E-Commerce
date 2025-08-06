@@ -1,6 +1,6 @@
-import useModal from './UseModal';
+import useModal from './useModal';
 import './Modal.css'
-import MainButton from './MainButton';
+import MainButton from '../MainButton';
 
 
 function Modal() {
