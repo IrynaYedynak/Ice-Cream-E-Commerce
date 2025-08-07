@@ -1,0 +1,9 @@
+.checkout-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px;
+    gap: 40px;
+    font-family: var(--font-family);
+    background-color: #f9f9fb;
+}

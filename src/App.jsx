@@ -10,6 +10,7 @@ import CartPage from "./components/Cart/CartPage";
 import CartProvider from "./components/Cart/CartContext";
 import FAQS from "./pages/FAQS";
 import Contacts from "./pages/Contacts";
+import CheckoutPage from "./components/Checkout/CheckoutPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/cart" element={<CartPage />} />
           <Route path="/faqs" element={<FAQS />} />
           <Route path="/contacts" element={<Contacts/>} />
+          <Route path="/checkout" element={<CheckoutPage/>}/>
         </Route>
       </Routes>
       <Modal />
