@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "./CheckoutForm.css";
 import MainButton from "../MainButton";
+import { useCart } from "../Cart/useCart";
+import { useNavigate } from "react-router-dom";
+
 
 const CheckoutForm = () => {
     const [formData, setFormData] = useState({
@@ -17,6 +20,9 @@ const CheckoutForm = () => {
         securityCode: "",
     });
 
+    const { setCartItems } = useCart(); // доступ до очищення
+    const navigate = useNavigate();     // навігація
+
     const handleChange = (e) => {
         setFormData((prev) => ({
         ...prev,
@@ -25,10 +31,17 @@ const CheckoutForm = () => {
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        alert("Order Placed! 🎉");
-        // тут можна очистити корзину або перейти на "Thank you page"
-    };
+    e.preventDefault();
+
+  // Емуляція надсилання замовлення
+    setTimeout(() => {
+    setCartItems([]);         // очищаємо корзину
+    navigate("/thank-you");   // редірект
+  }, 500); // можна зробити 0 якщо без затримки
+};
+
+    
+
 
     return (
         <form className="checkout-form" onSubmit={handleSubmit}>
@@ -64,6 +77,7 @@ const CheckoutForm = () => {
         <MainButton
         text='Place Order Now →'
         color="pink"
+        type="submit"
         />
         <p className="terms-text">
             By clicking the button, you agree to the <a href="#">Terms and Conditions</a>.

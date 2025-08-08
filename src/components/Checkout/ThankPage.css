@@ -1,0 +1,38 @@
+.thank-you-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 200px 20px;  
+    font-family: var(--font-family);
+    background: linear-gradient(158deg, #efd7ef 8%, #f5f9fc 40%, #f8eae1 66%, #eaf8f9 91%);
+}
+
+.thank-you-page h1 {
+    font-size: 42px;
+    color: #f83d8e;
+    margin: 16px;
+    font-family: var(--second-family);
+    font-weight: 400;
+}
+
+.thank-you-page p {
+    font-size: 18px;
+    color: #555353;
+    margin-bottom: 32px;
+    font-weight: 400;
+}
+
+.back-home-link {
+    color: white;
+    background-color: #f83d8e;
+    padding: 12px 20px;
+    border-radius: 24px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.back-home-link:hover {
+    background-color: #f83d8e;
+}

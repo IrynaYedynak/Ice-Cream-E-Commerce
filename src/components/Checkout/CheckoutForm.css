@@ -38,7 +38,7 @@ label {
 }
 
 .main-btn {
-    background: hotpink;
+    background: #f83d8e;
     color: white;
     padding: 14px 24px;
     font-size: 16px;
@@ -50,7 +50,7 @@ label {
 }
 
 .main-btn:hover {
-    background: deeppink;
+    background: #f83d8e;
 }
 
 .terms-text {
@@ -60,6 +60,6 @@ label {
 }
 
 .terms-text a {
-    color: hotpink;
+    color: #f83d8e;
     text-decoration: none;
 }
