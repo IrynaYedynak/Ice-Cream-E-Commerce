@@ -12,6 +12,8 @@ import FAQS from "./pages/FAQS";
 import Contacts from "./pages/Contacts";
 import CheckoutPage from "./components/Checkout/CheckoutPage";
 import ThankPage from "./components/Checkout/ThankPage";
+import 'animate.css';
+
 
 function App() {
   return (

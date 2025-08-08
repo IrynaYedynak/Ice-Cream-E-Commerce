@@ -15,6 +15,18 @@
     padding-top: 80px; 
 }
 
+.animate__backInLeft 
+{
+    --animate-duration: 1s;
+}
+
+.animate__backInDown,
+.animate__fadeIn
+{
+    --animate-duration: 2s;
+}
+
+
 .mainbackground .background-picture {
     position: absolute;
     left: 0;

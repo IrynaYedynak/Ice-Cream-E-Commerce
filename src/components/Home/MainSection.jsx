@@ -6,6 +6,8 @@ import MainButton from '../MainButton';
 import { Link } from 'react-router-dom';
 import './MainSection.css'
 import '../../index.css'
+import 'animate.css';
+
 
 
 function MainSection() {
@@ -16,11 +18,11 @@ function MainSection() {
             </div>
                 <div className="main-section">
                     <div className="banner-text">
-                        <h3>&mdash; Welcome to The</h3>
-                        <h1>Discover <span>Sweet</span> <br /> Delights!</h1>
-                        <p>Relish the timeless taste of handcrafted ice cream, made <br /> with passion and the finest ingredients.</p>
+                        <h3 className=' animate__animated animate__backInLeft'>&mdash; Welcome to The</h3>
+                        <h1 className='animate__animated animate__backInDown'>Discover <span>Sweet</span> <br /> Delights!</h1>
+                        <p className=' animate__animated animate__fadeIn'>Relish the timeless taste of handcrafted ice cream, made <br /> with passion and the finest ingredients.</p>
                         <Link to="/shop">
-                            <MainButton text="Browse Our Classic Flavours →" color='purple' className='banner-button'/>
+                            <MainButton text="Browse Our Classic Flavours →" color='purple' className='banner-button animate__animated animate__fadeIn'/>
                         </Link>
                     </div>
                         <Tilt
