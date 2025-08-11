@@ -32,3 +32,25 @@
     background-color: #f83d8e;
     color: white;
 }
+
+@media (max-width: 576px) {
+    .product-card {
+        flex: 0 0 100%;
+    }
+}
+
+.carousel-btn {
+    color: rgb(48, 48, 48);
+    border: none;
+    padding: 15px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-btn:hover {
+    background-color: #f83d8e;
+    color: white;
+}

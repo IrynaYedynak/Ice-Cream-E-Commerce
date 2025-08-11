@@ -78,3 +78,140 @@
 .banner-text h2 span {
     color:#f83d8e ;
 }
+
+@media (max-width: 1024px) {
+    .art-section {
+        height: 60vh;
+        margin-left: 20px;
+    }
+    .shape-dots {
+        width: 35px;
+        top: 10%;
+        left: 15%;
+        transform: translateY(30px) scale(0.7) rotate(-30deg);
+    }
+    .shape-triangle {
+        width: 30px;
+        top: 25%;
+        right: 8%;
+        transform: translateY(30px) scale(0.7) rotate(-90deg);
+    }
+    .shape-circle {
+        width: 50px;
+        top: 18%;
+        left: 4%;
+        transform: translateY(30px) scale(0.7) rotate(-60deg);
+    }
+    .shape-half {
+        width: 100px;
+        bottom: -15px;
+        right: 4%;
+    }
+
+    .art-decription {
+        padding: 0 3rem 0 2rem;
+        gap: 25px;
+        width: 100%;
+    }
+
+    .art-picture {
+        width: 40%;
+        max-height: 500px;
+    }
+
+    .banner-text h2 {
+        font-size: 45px;
+    }
+}
+
+/* 768px - планшети (портрет) */
+@media (max-width: 768px) {
+    .art-section {
+        flex-direction: column;
+        height: fit-content;
+    }
+    .shape-dots {
+        width: 30px;
+        top: 8%;
+        left: 12%;
+    }
+    .shape-triangle {
+        width: 25px;
+        top: 22%;
+        right: 6%;
+    }
+    .shape-circle {
+        width: 45px;
+        top: 15%;
+        left: 3%;
+    }
+    .shape-half {
+        width: 90px;
+        bottom: -20px;
+        right: 3%;
+    }
+
+    .art-decription {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0 2rem;
+        gap: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .art-picture {
+        width: 70vw;
+        max-height: 300px;
+    }
+
+    .banner-text h2 {
+        font-size: 35px;
+        text-align: center;
+    }
+}
+
+/* 576px - великі телефони / маленькі планшети */
+@media (max-width: 576px) {
+    .shape-dots,
+    .shape-triangle,
+    .shape-circle,
+    .shape-half {
+        display: none; 
+    }
+
+    .art-decription {
+        padding: 0 1.5rem;
+        width: 100%;
+    }
+
+    .art-picture {
+        width: 90vw;
+        max-height: 300px;
+    }
+
+    .banner-text h2 {
+        font-size: 32px;
+    }
+}
+
+/* До 480px - телефони портрет */
+@media (max-width: 480px) {
+    .art-decription {
+        padding: 0 1rem;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .art-picture {
+        width: 95vw;
+        max-height: 200px;
+    }
+
+    .banner-text h2 {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+}

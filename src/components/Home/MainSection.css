@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 .main {
-    min-height: 100vh;
+    height: 100vh;
     background: linear-gradient(156deg, #efd7ef 8%, #f5f9fc 39%, #f8eae1 66%, #eaf8f9 91%);
     display: flex;
     align-items: center;
@@ -15,17 +15,14 @@
     padding-top: 80px; 
 }
 
-.animate__backInLeft 
-{
+.animate__backInLeft {
     --animate-duration: 1s;
 }
 
 .animate__backInDown,
-.animate__fadeIn
-{
+.animate__fadeIn {
     --animate-duration: 2s;
 }
-
 
 .mainbackground .background-picture {
     position: absolute;
@@ -52,6 +49,7 @@
 
 .banner-picture {
     overflow: hidden;
+    object-fit: contain;
 }
 
 .banner-picture img {
@@ -75,3 +73,94 @@
     pointer-events: none;
 }
 
+@media (max-width: 1024px) {
+    .main {
+        padding-top: 80px; /* Зменшено для мобільних */
+        
+    }
+
+    .mainbackground .background-picture {
+        top: 20%; /* Налаштовано для мобільних */
+        width: 150px; /* Зменшено */
+        height: auto; /* Пропорційність */
+    }
+
+    .main-section {
+        justify-content: center; /* Центрування */
+        padding: 0 10px; /* Зменшено padding */
+        margin-left: 95px;
+        gap: 20px; /* Проміжок між елементами */
+    }
+
+    .banner-picture {
+        width: 70%; /* Повна ширина */
+        margin-top: 75px;
+    }
+
+    .banner-picture img {
+        width: 100%; /* Адаптивна ширина */
+        max-height: 400px; /* Зменшено */
+    }
+
+    .banner-text {
+        width: 100%;
+    }
+
+    .banner-text h3 {
+        font-size: 25px;
+        text-align: left;
+    }
+
+    .banner-text h1 {
+        font-size: 55px;
+    }
+
+    .banner-text p {
+        font-size: 15px;
+    }
+
+    .banner-button {
+        padding: 0.7rem 2.0rem;
+        font-size: 0.70rem;
+        margin-bottom: 15px;
+    }
+}
+
+/* Медіа-запит для планшетів (від 577px до 768px) */
+@media (max-width: 768px) {
+    .main {
+        padding-top: 90px; /* Середній padding */
+        justify-content: center; /* Як в оригіналі */
+    }
+
+    .mainbackground .background-picture {
+        top: 22%; /* Проміжне значення */
+        width: 200px; /* Середній розмір */
+        height: auto;
+    }
+
+    .main-section {
+        justify-content: flex-end; /* Як в оригіналі */
+        align-items: flex-end;
+        padding: 0 15px 0 5px; /* Проміжне значення */
+        flex-direction: column; 
+        gap: 0; 
+        height: fit-content;
+    }
+
+    .banner-text {
+        align-items: center;
+    }
+
+    .banner-picture img {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .mainbackground .background-picture {
+        top: 22%; /* Проміжне значення */
+        width: 100px; /* Середній розмір */
+        height: auto;
+    }
+}

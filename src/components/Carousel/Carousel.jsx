@@ -1,11 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import './Carousel.css'; 
-
 
 function Carousel({ items, CardComponent, cardsToShow = 3 }) {
     const [index, setIndex] = useState(0);
+    const [cardsVisible, setCardsVisible] = useState(cardsToShow);
     const total = items.length;
 
+    useEffect(() => {
+        const updateCardsToShow = () => {
+            const width = window.innerWidth;
+            if (width <= 576) {
+                setCardsVisible(1);
+            } else if (width <= 1024) {
+                setCardsVisible(2);
+            } else {
+                setCardsVisible(3);
+            }
+        };
+
+        updateCardsToShow();
+
+        window.addEventListener('resize', updateCardsToShow);
+        return () => window.removeEventListener('resize', updateCardsToShow);
+    }, []);
+
+    // Обробка переходів, щоб індекс був коректним
     const handlePrev = () => {
         setIndex((prev) => (prev - 1 + total) % total);
     };
@@ -14,8 +33,9 @@ function Carousel({ items, CardComponent, cardsToShow = 3 }) {
         setIndex((prev) => (prev + 1) % total);
     };
 
+    // Відбираємо видимі картки
     const visibleCards = [];
-    for (let i = 0; i < cardsToShow; i++) {
+    for (let i = 0; i < cardsVisible; i++) {
         visibleCards.push(items[(index + i) % total]);
     }
 
