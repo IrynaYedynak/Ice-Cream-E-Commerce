@@ -1,12 +1,13 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.feedback-section{
+.feedback-section {
     background: linear-gradient(156deg, #efd7ef 8%, #f5f9fc 39%, #f8eae1 66%, #eaf8f9 91%);
     position: relative;
+    padding: clamp(2rem, 5vw, 4rem) 0; /* Гнучке падінг для секції */
 }
 
 .avatars {
@@ -20,50 +21,32 @@
 
 .avatar {
     position: absolute;
-    width: 72px;
-    height: 72px;
+    width: clamp(40px, 5vw, 72px); /* Гнучкий розмір аватарів */
+    height: clamp(40px, 5vw, 72px);
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto 10px;
+    margin: 0 auto 0.625rem; /* rem замість px */
 }
 
-.avatar1 {
-    top: 10%;
-    left: 15%;
+/* Позиції аватарів — вже в %, добре, але з гнучким розміром вони менше накладатимуться на маленьких екранах */
+.avatar1 { top: 10%; left: 15%; }
+.avatar2 { top: 25%; left: 5%; }
+.avatar3 { top: 45%; left: 12%; }
+.avatar4 { bottom: 20%; left: 4%; }
+.avatar5 { top: 15%; right: 15%; }
+.avatar6 { top: 35%; right: 5%; }
+.avatar7 { bottom: 28%; right: 12%; }
+.avatar8 { bottom: 10%; right: 5%; }
+
+
+@media (max-width: 1024px) {
+    .avatar3 {
+        display: none;
+    }
 }
 
-.avatar2 {
-    top: 25%;
-    left: 5%;
+@media (max-width: 768px) {
+    .avatar {
+        display: none;
+    }
 }
-
-.avatar3 {
-    top: 45%;
-    left: 12%;
-}
-
-.avatar4 {
-    bottom: 20%;
-    left: 4%;
-}
-
-.avatar5 {
-    top: 15%;
-    right: 15%;
-}
-
-.avatar6 {
-    top: 35%;
-    right: 5%;
-}
-
-.avatar7 {
-    bottom: 28%;
-    right: 12%;
-}
-
-.avatar8 {
-    bottom: 10%;
-    right: 5%;
-}
-

@@ -33,7 +33,7 @@ function SubscribeSection() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             />
-            <MainButton text="Subscribe →" onClick={handleClick} />
+            <MainButton text="Subscribe →" onClick={handleClick} className='subscribe-btn'/>
         </div>
         <label className="checkbox-label">
             <input

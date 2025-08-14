@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 80px 0;
+    padding: clamp(40px, 5vw, 80px) 0;
     margin: 0 auto;
     background: linear-gradient(155deg, #efd7ef 8%, #f5f9fc 43%, #f8eae1 64%, #eaf8f9 87%);
 }
@@ -17,17 +17,17 @@
 .follow-section-title {
     display: flex;
     flex-direction: column;
-    padding: 25px;
+    padding: clamp(15px, 2.5vw, 25px);
     text-align: center;
 }
 
 .follow-section-title h2 {
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 50px;
+    font-size: clamp(2rem, 5vw, 3.125rem);
     line-height: 100%;
     color: #000000; 
-    padding: 10px;
+    padding: clamp(5px, 1vw, 10px);
 }
 
 .follow-section-title h2 span {
@@ -37,46 +37,63 @@
 .follow-section-title p {
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 15px;
+    font-size: clamp(14px, 1.5vw, 15px);
     color: #665f5f;
-    padding: 10px;
+    padding: clamp(5px, 1vw, 10px);
 }
 
 .image-wrapper {
     position: relative;
     display: inline-block;
+    max-width: 100%;
 }
 
 .circle {
     position: absolute;
-    width: 90px; 
-    height: 90px;
+    width: clamp(50px, 8vw, 90px); 
+    height: auto;
     z-index: 1;
 }
 
 .left {
-    top: -15px;
-    left: -30px;
+    top: clamp(-25px, -2.5vw, -15px);
+    left: clamp(-50px, -5vw, -30px);
 }
 
 .right {
-    bottom: -15px;
-    right: -30px;
+    bottom: clamp(-25px, -2.5vw, -15px);
+    right: clamp(-50px, -5vw, -30px);
 }
 
 .follow-images {
     z-index: 2;
     position: relative;
-    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(5px, 1vw, 10px);
 }
 
 .follow-images img {
-    padding: 10px;
-    width: 250px;
-    height: 350px;
+    width: clamp(150px, 20vw, 250px);
+    height: auto;
     transition: transform 0.3s ease;
 }
 
 .follow-images img:hover {
     transform: scale(1.1); 
+}
+
+@media (max-width: 768px) {
+    .image-wrapper {
+        padding: 0 clamp(20px, 5vw, 40px);
+    }
+
+    .left {
+        left: clamp(-30px, -5vw, -15px);
+    }
+
+    .right {
+        right: clamp(-30px, -5vw, -15px);
+    }
 }

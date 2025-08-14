@@ -5,7 +5,8 @@
 }
 
 .main {
-    height: 100vh;
+    padding: clamp(40px, 5vw, 80px) 0;
+    margin: 0 auto;
     background: linear-gradient(156deg, #efd7ef 8%, #f5f9fc 39%, #f8eae1 66%, #eaf8f9 91%);
     display: flex;
     align-items: center;
@@ -134,9 +135,7 @@
     }
 
     .mainbackground .background-picture {
-        top: 22%; /* Проміжне значення */
-        width: 200px; /* Середній розмір */
-        height: auto;
+        display: none;
     }
 
     .main-section {
@@ -158,9 +157,10 @@
 }
 
 @media (max-width: 576px) {
-    .mainbackground .background-picture {
-        top: 22%; /* Проміжне значення */
-        width: 100px; /* Середній розмір */
-        height: auto;
+    .main-section {
+        margin: 0;
+    }
+    .main {
+        text-align: center;
     }
 }
