@@ -127,7 +127,6 @@
     }
 }
 
-/* Медіа-запит для планшетів (від 577px до 768px) */
 @media (max-width: 768px) {
     .main {
         padding-top: 90px; /* Середній padding */

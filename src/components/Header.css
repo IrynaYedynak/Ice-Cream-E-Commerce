@@ -1,109 +1,196 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* === Загальні стилі === */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
 
-.header {
+.header { 
     position: absolute; 
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
     z-index: 10; 
     background: transparent; 
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
+    padding: 1rem 2rem; 
+    display: flex; 
+    justify-content: space-between; /* Логотип зліва, все інше справа */
+    align-items: center; 
+} 
 
-.logo {
-display: flex;
-align-items: center;
-gap: 8px;
-margin-bottom: 0;
-text-decoration: none;
-}
+.logo { 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    text-decoration: none; 
+} 
 
 .logo img {
-width: 40px;
-height: auto;
-}
+    width: 40px; 
+    height: auto; 
+} 
 
-.logo-text {
-font-family: var(--second-family);
-font-size: 24px;
-font-weight: bold;
-}
-
-.logo-text-main {
-color: #f83d8e;
-}
-
+.logo-text { 
+    font-family: var(--second-family);
+    font-size: 24px; 
+    font-weight: bold; 
+} 
+    
+.logo-text-main { 
+    color: #f83d8e; 
+} 
+    
 .logo-text-second {
-color: #77449c;
+    color: #77449c; 
+} 
+
+/* Контейнер для навігації та кнопок */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.nav {
-display: flex;
-gap: 20px;
+/* Навігація */
+.nav { 
+    display: flex; 
+    gap: 20px; 
+    transition: all 0.3s ease;
+} 
+    
+.nav a { 
+    text-decoration: none; 
+    color: #333; 
+    font-size: 16px; 
+    font-family: var(--font-family); 
+    font-weight: 400; 
+} 
+    
+.nav a:hover { 
+    color: #F83D8E; 
+} 
+    
+.nav a:first-child { 
+    color: #F83D8E; 
+} 
+
+/* Дії (кошик, кнопка) */
+.actions-header { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+} 
+    
+.icon-button { 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    padding: 8px; 
+    position: relative; 
+    display: flex; 
+    align-items: center; 
+} 
+    
+.icon-button svg { 
+    width: 24px; 
+    height: 25px; 
+    fill: #444; 
+    transition: 0.3s; 
+} 
+    
+.icon-button:hover svg { 
+    fill: #F83D8E; 
+} 
+
+/* Бейдж на кошику */
+.cart .badge { 
+    position: absolute; 
+    top: -7px; 
+    right: -4px; 
+    background: purple; 
+    color: white; 
+    font-size: 10px; 
+    padding: 3px 5px; 
+    border-radius: 10px; 
+    font-weight: bold; 
+    min-width: 16px; 
+    text-align: center; 
+    line-height: 1; 
+} 
+
+/* Бургер меню */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
 }
 
-.nav a {
-text-decoration: none;
-color: #333;
-font-size:  16px;
-font-family: var(--font-family);
-font-weight: 400;
+.burger span {
+    display: block;
+    height: 2px;
+    background: #333;
+    border-radius: 3px;
+    transition: 0.3s;
 }
 
-.nav a:hover {
-color: #F83D8E;
+.burger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transform-origin: center;
+}
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+.burger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transform-origin: center;
 }
 
-.nav a:first-child {
-color: #F83D8E;
+/* === Адаптивні стилі === */
+@media (max-width: 900px) {
+
+    /* Бургер ставимо абсолютно */
+    .burger {
+        display: flex;
+        position: absolute;  /* ключ */
+        top: 50%;
+        right: 2rem;          /* відступ від правого краю */
+        transform: translateY(-50%);
+        z-index: 20;     
+        overflow: hidden;     /* вище за кнопки */
+    }
+
+    /* Навігація */
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 60%;
+        height: 95vh;
+        background: rgb(255, 255, 255);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        transition: right 0.4s ease;
+        z-index: 15;
+        box-shadow: -4px 0 20px rgba(0,0,0,0.2);
+        border-top-left-radius: 200px;
+        border-bottom-left-radius: 200px;
+    }
+
+    .nav.open {
+        right: 0;
+    }
+
+    .actions-header {
+        gap: 8px;
+        margin-right: 45px;
+    }
 }
 
-.actions-header {
-display: flex;
-align-items: center;
-gap: 12px;
-}
-
-.icon-button {
-background: none;
-border: none;
-cursor: pointer;
-padding: 8px;
-position: relative;
-display: flex;
-align-items: center;
-}
-
-.icon-button svg {
-width: 24px;
-height: 25px;
-fill: #444;
-transition: 0.3s;
-}
-
-.icon-button:hover svg {
-fill: #F83D8E;
-}
-
-/* === Бейдж на кошику === */
-.cart .badge {
-position: absolute;
-top: -7px;
-right: -4px;
-background: purple;
-color: white;
-font-size: 10px;
-padding: 3px 5px;
-border-radius: 10px;
-font-weight: bold;
-min-width: 16px;
-text-align: center;
-line-height: 1;
-}
