@@ -14,7 +14,7 @@
     background: transparent; 
     padding: 1rem 2rem; 
     display: flex; 
-    justify-content: space-between; /* Логотип зліва, все інше справа */
+    justify-content: space-between; 
     align-items: center; 
 } 
 
@@ -118,13 +118,21 @@
     line-height: 1; 
 } 
 
+.desktop-only {
+    display: inline-block;
+}
+
+.mobile-only {
+    display: none;
+}
+
 /* Бургер меню */
 .burger {
     display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 25px;
-    height: 18px;
+    height: 16.5px;
     background: none;
     border: none;
     cursor: pointer;
@@ -151,10 +159,9 @@
     transform-origin: center;
 }
 
-/* === Адаптивні стилі === */
+
 @media (max-width: 900px) {
 
-    /* Бургер ставимо абсолютно */
     .burger {
         display: flex;
         position: absolute;  /* ключ */
@@ -162,15 +169,25 @@
         right: 2rem;          /* відступ від правого краю */
         transform: translateY(-50%);
         z-index: 20;     
-        overflow: hidden;     /* вище за кнопки */
     }
 
-    /* Навігація */
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+    display: block;
+    }
+
+    .actions-header .btn-contact {
+    display: none; 
+    }
+
     .nav {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 60%;
+        width: 50%;
         height: 95vh;
         background: rgb(255, 255, 255);
         flex-direction: column;
@@ -182,6 +199,10 @@
         box-shadow: -4px 0 20px rgba(0,0,0,0.2);
         border-top-left-radius: 200px;
         border-bottom-left-radius: 200px;
+    }
+
+    .nav a {
+        font-size: 20px;
     }
 
     .nav.open {

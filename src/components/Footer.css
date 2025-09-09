@@ -169,3 +169,15 @@ color: #f83d8e;
     border-top: 1px solid #a5a5a5;
 }
 
+@media (max-width: 768px) {
+    .nav-section {
+        display: none;
+    }
+}
+
+@media (max-width: 663px) {
+    .footer-content{
+        padding-left: 15%;
+    }
+}
+

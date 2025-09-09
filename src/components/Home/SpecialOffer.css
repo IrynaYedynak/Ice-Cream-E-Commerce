@@ -117,6 +117,7 @@
 
     .section-text {
         align-items: center;
+        padding-left: 0;
     }
 
     .shape-special {

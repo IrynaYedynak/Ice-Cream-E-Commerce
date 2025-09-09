@@ -21,7 +21,6 @@ function Header() {
                 </div>
             </Link>
 
-            {/* Бургер кнопка */}
             <button 
                 className={`burger ${menuOpen ? 'active' : ''}`} 
                 onClick={() => setMenuOpen(!menuOpen)}
@@ -32,12 +31,16 @@ function Header() {
                 <span></span>
             </button>
 
-            {/* Навігація */}
             <nav className={`nav ${menuOpen ? 'open' : ''}`}>
                 <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
                 <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
                 <Link to="/shop" onClick={() => setMenuOpen(false)}>Shop</Link>
                 <Link to="/faqs" onClick={() => setMenuOpen(false)}>FAQ’s</Link>
+                <div className="mobile-only">
+                    <Link to='/contacts' onClick={() => setMenuOpen(false)}>
+                        <MainButton text="Contact us" color="pink" />
+                    </Link>
+                </div>
             </nav>
 
             <div className="actions-header">
@@ -76,9 +79,11 @@ function Header() {
                     </button>
                 </Link>
                 
-                <Link to='/contacts'>
-                    <MainButton text="Contact us →" color='pink' />
-                </Link>
+                <div className="desktop-only">
+                    <Link to='/contacts'>
+                        <MainButton text="Contact us" color="pink" />
+                    </Link>
+                </div>
             </div>
         </header>
     )

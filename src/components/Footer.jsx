@@ -3,6 +3,7 @@ import FooterImage from '../assets/images/footer-image.svg'
 import FooterLogo from '../assets/images/logo_footer.svg'
 import './Footer.css'
 import '../index.css'
+import BackToTop from "./backToTop"
 
 function Footer() {
 
@@ -225,6 +226,7 @@ function Footer() {
                 </span>
             </div>
             </div>
+            <BackToTop />
             <p className="footer-bottom">Copyright © 2024 BlackRise Themes Inc. All rights reserved.</p>
         </div>
         
