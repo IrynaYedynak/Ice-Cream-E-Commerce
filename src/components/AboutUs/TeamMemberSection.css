@@ -6,13 +6,17 @@
 
 .member-section {
     width: 100%;
-    height: 100vh;
+    max-height: 100vh; 
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding-top: 50px;
+    padding-left: clamp(20px, 5%, 100px);   /* адаптивний лівий padding */
+    padding-right: clamp(20px, 5%, 100px);  /* адаптивний правий padding */
     background: linear-gradient(155deg, #efd7ef 8%, #f5f9fc 43%, #f8eae1 64%, #eaf8f9 87%);
 }
+
 
 .banner-text-member {
     display: flex;
@@ -38,4 +42,26 @@
     font-weight: 400;
     font-size: 18px;
     color: #8f8684;
+}
+
+@media (max-width: 1024px) {
+    .banner-text-member h2 {
+        font-size: 40px;
+    }
+    .banner-text-member p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .member-section {
+        padding: 50px 10px;
+    }
+
+    .banner-text-member h2 {
+        font-size: 32px;
+    }
+    .banner-text-member p {
+        font-size: 14px;
+    }
 }
