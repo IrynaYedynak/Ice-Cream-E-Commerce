@@ -1,21 +1,12 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .contact-button {
-border: none;
-padding: 10px 20px;
-border-radius: 30px;
-color: white;
-font-weight: bold;
-cursor: pointer;
-transition: 0.3s ease;
-}
-
-.contact-button:hover {
-    opacity: 0.9;
+    border: none;
+    padding: clamp(0.5rem, 2vw, 0.9rem) clamp(1rem, 4vw, 2rem); /* адаптивний padding */
+    border-radius: clamp(20px, 5vw, 30px); /* адаптивний border-radius */
+    color: white;
+    font-weight: bold;
+    font-size: clamp(0.75rem, 2vw, 1rem); /* адаптивний розмір тексту */
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .contact-button.pink {
@@ -26,11 +17,15 @@ transition: 0.3s ease;
     background-color: #77449c;
 }
 
+.contact-button:hover {
+    opacity: 0.9;
+}
+
 .banner-button {
-    padding: 0.9rem 2.2rem;
-    border-radius: 3rem;
+    padding: clamp(0.5rem, 2vw, 0.9rem) clamp(1rem, 4vw, 2.2rem); 
+    border-radius: clamp(2rem, 5vw, 3rem);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: clamp(0.75rem, 2vw, 0.95rem); 
     color: #fff;
     box-shadow: 0 3px 22px 3px rgba(104, 50, 146, 0.31);
     background: #683292;
@@ -43,4 +38,5 @@ transition: 0.3s ease;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
+
 

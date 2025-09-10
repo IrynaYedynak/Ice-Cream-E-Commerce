@@ -142,6 +142,7 @@ color: #f83d8e;
 
 .socials {
     display: flex;
+    justify-content: space-around;
     gap: 12px;
     margin-top: 10px;
 }
@@ -177,7 +178,7 @@ color: #f83d8e;
 
 @media (max-width: 663px) {
     .footer-content{
-        padding-left: 15%;
+        padding: clamp(15px, 10vw, 150px);
     }
 }
 

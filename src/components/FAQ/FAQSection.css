@@ -1,7 +1,7 @@
 .faq-container {
     max-width: 800px;
     margin: 50px auto;
-    padding-top: 90px;
+    padding: 90px clamp(15px, 5vw, 60px) 0;
     font-family: var(--font-family);
     
 }
@@ -9,7 +9,7 @@
 .faq-title {
     text-align: center;
     font-family: var(--second-family);
-    font-size: 38px;
+    font-size: clamp(28px, 4vw, 38px);
     font-weight: 300;
     padding: 10px;
 }
@@ -53,9 +53,17 @@
 
 .faq-question {
     font-weight: bold;
+    font-size: clamp(12px, 1.8vw, 16px);
 }
 
 .faq-answer {
     margin-top: 8px;
     color: #333;
+    font-size: clamp(12px, 1.8vw, 16px);
+}
+
+@media (max-width: 768px) {
+    .faq-list{
+        column-count: 1;
+    }
 }

@@ -85,12 +85,8 @@ import MainButton from '../MainButton';
             onChange={handleChange}
             className="form-textarea wide"
             />
-            <MainButton 
-            text='Submit Now'
-            color='pink'
-            type='submit'
-            />
         </form>
+            <MainButton text="Submit Now" color="pink" type="submit" className="form-submit-button" onClick={handleSubmit} />
         </div>
     );
 }

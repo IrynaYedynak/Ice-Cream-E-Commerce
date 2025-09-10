@@ -24,7 +24,7 @@ function LimitedOfferSection() {
                     <p>Get 20% Off All Vegan Ice Creams!</p>
                     <Link to="/shop">
                     <MainButton 
-                    text='Get this deal → '
+                    text='Get this deal '
                     color='purple'
                     />
                     </Link>

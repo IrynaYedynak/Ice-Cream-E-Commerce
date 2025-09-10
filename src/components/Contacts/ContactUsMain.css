@@ -1,5 +1,6 @@
 .contact-us {
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,7 +8,7 @@
     gap: 40px;
     text-align: center;
     margin: 0 auto;
-    padding: 6rem 0;
+    padding: 6rem clamp(1rem, 5vw, 4rem) 2rem;
     font-family: var(--font-family);
 }
 
@@ -18,7 +19,7 @@
 .contact-us-title h2 {
     font-family: var(--second-family);
     font-weight: 300;
-    font-size: 55px;
+    font-size: clamp(22px, 5vw, 55px);
     margin-bottom: 10px;
 }
 
@@ -33,8 +34,9 @@
 .contact-us-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    align-items: start;
+    align-items: center;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .contact-info {
@@ -45,17 +47,27 @@
 }
 
 .contact-card {
-    width: 500;
-    height: 100px;
+    width: clamp(280px, 90%, 500px);
+    min-height: 100px;
     display: flex;
     justify-content: flex-start;
     gap: 18px;
     text-align: left;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     border-radius: 20px;
-    padding: 20px 25px;
+    padding: clamp(10px, 3vw, 20px) clamp(15px, 4vw, 25px);
     margin-bottom: 20px;
 
+}
+
+.contact-card-info h4 {
+    margin-bottom: 5px;
+    font-size: clamp(14px, 2vw, 18px); /* адаптивний розмір заголовка */
+}
+
+.contact-card-info p {
+    color: rgb(117, 114, 114);
+    font-size: clamp(12px, 1.5vw, 16px); /* адаптивний розмір тексту */
 }
 
 .contact-icon-wrapper {
@@ -79,3 +91,8 @@
     color: rgb(117, 114, 114);
 }
 
+@media (max-width: 431px){
+    .contact-us-container {
+        grid-template-columns: 1fr;
+    }
+}
