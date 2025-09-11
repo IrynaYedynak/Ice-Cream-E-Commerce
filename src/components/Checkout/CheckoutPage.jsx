@@ -9,7 +9,7 @@ const CheckoutPage = () => {
         <div className="checkout-content">
         <Link to="/cart" className="back-to-cart-link">← Back to Cart</Link>
         <CheckoutForm />
-        <CheckoutSummary />
+        <CheckoutSummary className="checkout-summary" />
         </div>
         
     </div>
