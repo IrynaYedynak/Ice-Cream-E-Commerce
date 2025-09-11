@@ -1,21 +1,23 @@
 .cart-page {
     display: flex;
     align-items: flex-start;
+    align-items: center;
     gap: 2rem;
-    padding: 7rem;
+    padding: clamp(1rem, 5vw, 7rem);
+    padding-top: clamp(6rem, 8vw, 9rem);
     background-color: #fdfdfd;
 }
 
 .cart-items-list {
     flex: 2;
     background: #fff;
-    padding: 1rem;
+    padding: clamp(0.5rem, 2vw, 1rem);
     border-radius: 8px;
 }
 
 .cart-items-list h2 {
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 1vw, 1.5rem);
     color: #333;
     font-family: var(--font-family);
 }
@@ -25,8 +27,14 @@
     margin-top: 1.5rem;
     color: #683292;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 1vw, 0.95rem);
     font-weight: bold;
     font-family: var(--font-family);
 }
 
+@media (max-width: 958px) {
+    .cart-page {
+    display: flex;
+    flex-direction: column;
+    }
+}
