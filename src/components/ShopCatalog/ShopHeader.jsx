@@ -1,8 +1,15 @@
 import './ShopHeader.css';
 import { useState } from 'react';
-import { FaThLarge } from 'react-icons/fa'; // значок grid view
+import { BiGridAlt } from "react-icons/bi";
+import FiltersButton from './FiltersButton';
 
-function ShopHeader({ totalProducts = 9, visibleRange = [1, 6], onSortChange, onSearchChange }) {
+function ShopHeader({ 
+    totalProducts = 9, 
+    visibleRange = [1, 6], 
+    onSortChange, 
+    onSearchChange, 
+    onOpenFilters 
+}) {
     const [sortOption, setSortOption] = useState('default');
 
     const handleSortChange = (e) => {
@@ -17,22 +24,23 @@ function ShopHeader({ totalProducts = 9, visibleRange = [1, 6], onSortChange, on
 
     return (
         <div className="shop-header">
-            <input
+            <div className="left-group">
+                <input
                 type="search"
                 placeholder="Search"
                 className="search-input"
                 onChange={handleSearchChange}
             />
-
+            <FiltersButton onClick={onOpenFilters}/>
             <div className="view-info">
                 <button className="grid-button active">
-                    <FaThLarge />
+                    <BiGridAlt />
                 </button>
                 <span className="results-text">
-                    Showing {visibleRange[0]}–{visibleRange[1]} of {totalProducts} results
-                </span>
+                    {visibleRange[0]}–{visibleRange[1]} of {totalProducts} results
+                </span> 
             </div>
-
+            </div>         
             <select onChange={handleSortChange} value={sortOption} className="sort-select">
                 <option value="default">Default Sorting ▼</option>
                 <option value="priceLowHigh">Price: Low to High</option>

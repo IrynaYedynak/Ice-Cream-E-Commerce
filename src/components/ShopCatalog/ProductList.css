@@ -5,7 +5,6 @@
     padding: 2rem;
 }
 
-/* Пагінація */
 .pagination {
     text-align: center;
     margin: 1.5rem;
@@ -26,4 +25,20 @@
     background-color: #F83D8E;
     color: white;
     border-color: #F83D8E;
+}
+
+@media (max-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 391px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
 }

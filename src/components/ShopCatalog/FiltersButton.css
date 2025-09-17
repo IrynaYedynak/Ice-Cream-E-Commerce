@@ -1,0 +1,26 @@
+.filters-button {
+    display: flex;
+    align-items: center;
+    width: 35px;   
+    height: 35px;  
+    padding: 0.3rem 0.6rem;
+    background-color: transparent;
+    color: #f83d8e;
+    border: 1px solid #e6648f;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.filters-button:active {
+    transform: translateY(0);
+}
+
+.filters-button svg {
+    font-size: 1rem; 
+}
+
+@media (min-width: 769px) {
+    .filters-button {
+    display: none;
+    }
+}

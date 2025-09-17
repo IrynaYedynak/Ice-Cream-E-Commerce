@@ -1,23 +1,20 @@
-.sidebar {
-    width: 250px;
-    padding: 2rem;
-    border-radius: 16px;
-    font-family: var(--font-family);
-}
-
 .sidebar input[type="search"]:focus {
     outline: none;
-    border-color:  #F83D8E;
+    border-color: #F83D8E;
     box-shadow: 0 0 5px rgba(244, 143, 177, 0.4);
 }
 
 .filter-group {
     margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1.5rem;
 }
 
 .filter-group h4 {
     margin-bottom: 1rem;
-    font-size: 1.3rem;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: clamp(1rem, 1.5vw, 1.3rem); 
     color: #333;
 }
 
@@ -27,56 +24,60 @@
     margin: 0;
 }
 
-.filter-group li {
-    margin-bottom: 0.5rem;
-    font-size: 0.95rem;
+.filter-group label {
     display: flex;
     align-items: center;
+    margin-bottom: 0.75rem;
+    font-size: clamp(0.9rem, 1.8vw, 0.95rem); 
+    gap: 0.625rem;
     color: #8c8585;
 }
 
 .filter-group input[type="checkbox"] {
     margin-right: 0.6rem;
-    accent-color:  #F83D8E;
+    accent-color: #F83D8E;
+}
+
+.filter-group span {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #a8a8a8;
 }
 
 input[type="range"] {
-    appearance: none;         /* ✅ стандартна */
-    -webkit-appearance: none; /* ✅ для Safari / Chrome */
+    -webkit-appearance: none;
+    appearance: none;
     width: 100%;
     height: 6px;
-    background: #ffd6e8; /* рожевий трек */
+    background: #ffd6e8;
     border-radius: 5px;
     outline: none;
     margin: 10px 0;
 }
 
-/* Трек */
+/* Трек та повзунок для різних браузерів */
 input[type="range"]::-webkit-slider-runnable-track {
     height: 6px;
     background: #ffd6e8;
     border-radius: 5px;
 }
-
-/* Повзунок */
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 16px;
     height: 16px;
-    background: #ff69b4; /* яскраво-рожевий thumb */
+    background: #ff69b4;
     border-radius: 50%;
     cursor: pointer;
-    margin-top: -5px; /* центрує thumb по треку */
+    margin-top: -5px;
 }
 
-/* Firefox */
 input[type="range"]::-moz-range-track {
     height: 6px;
     background: #ffd6e8;
     border-radius: 5px;
 }
-
 input[type="range"]::-moz-range-thumb {
     width: 16px;
     height: 16px;
@@ -85,25 +86,18 @@ input[type="range"]::-moz-range-thumb {
     cursor: pointer;
 }
 
-/* Edge */
 input[type="range"]::-ms-track {
     height: 6px;
     background: transparent;
     border-color: transparent;
     color: transparent;
 }
-
-input[type="range"]::-ms-fill-lower {
-    background: #ffd6e8;
-    border-radius: 5px;
-}
-
+input[type="range"]::-ms-fill-lower,
 input[type="range"]::-ms-fill-upper {
     background: #ffd6e8;
     border-radius: 5px;
 }
-
-    input[type="range"]::-ms-thumb {
+input[type="range"]::-ms-thumb {
     width: 16px;
     height: 16px;
     background: #ff69b4;
@@ -111,22 +105,58 @@ input[type="range"]::-ms-fill-upper {
     cursor: pointer;
 }
 
-
-.filter-group span {
-    display: block;
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    color:  #a8a8a8;
+.sidebar {
+    width: 250px;
+    padding: 2rem;
+    font-family: var(--font-family);
+    transition: transform 0.3s ease;
 }
 
-.filter-group:not(:last-child) {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 1.5rem;
-    margin-bottom: 2rem;
+.sidebar-close {
+    display: none; 
 }
 
+@media (max-width: 1024px) {
+    .page-container {
+        grid-template-columns: 200px 1fr;
+        gap: 1.5rem;
+    }
 
-.filter-group h4 {
-    font-family: var(--second-family);
-    font-weight: 400;
+    .filter-group h4 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        max-width: 400px;
+        background: white;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1002;
+        overflow-y: auto;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    
+    .sidebar-close {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 1003;
+    }
 }

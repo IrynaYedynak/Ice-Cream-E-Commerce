@@ -13,6 +13,7 @@ function ProductCatalog() {
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [sortOption, setSortOption] = useState('default');
     const [currentPage, setCurrentPage] = useState(1);
+    const [isOpen, setIsOpen] = useState(false);
 
   // Фільтрація з урахуванням пошуку
     const filteredProducts = products.filter(product => {
@@ -61,11 +62,14 @@ function ProductCatalog() {
         visibleRange={[startIndex + 1, endIndex]}
         onSortChange={handleSortChange}
         onSearchChange={handleSearchChange}
+        onOpenFilters={() => setIsOpen(true)}
         />
         <div className="shop-content">
         <SidebarFilters
+            isOpen={isOpen} 
             onPriceChange={setMaxPrice}
             onCategoryChange={setSelectedCategories}
+            onClose={() => setIsOpen(false)} 
         />
         <main className="product-section">
             <ProductList

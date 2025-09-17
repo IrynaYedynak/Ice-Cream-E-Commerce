@@ -5,22 +5,32 @@
 }
 
 .product-card {
-    padding: 24px 25px;
+    padding: 2vw;
     text-align: center;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 1rem;
 }
 
-.card-image {
-    border-radius: 254px;
-    width: 244px;
-    height: 244px;
+.card-image  {
+    border-radius: 50%;
+    width: clamp(150px, 25vw, 244px);  
+    height: clamp(150px, 25vw, 244px);
     background: #ffe7fc;
-    padding-top: 35px;
+    padding-top: clamp(20px, 3vw, 35px);
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image img {
+    width: 80%;
+    height: 80%;
+    height: auto;
+    object-fit: fill;
 }
 
 .rating {
@@ -37,7 +47,7 @@
 .product-card h3 {
     font-family: var(--font-family);
     font-weight: 700;
-    font-size: 20px;
+    font-size: clamp(13px, 1.8vw, 20px);
     line-height: 120%;
     text-align: center;
     color: #0f0200;
@@ -47,7 +57,7 @@
 .product-card p{
     font-family: var(--font-family);
     font-weight: 700;
-    font-size: 22px;
+    font-size: clamp(16px, 2.5vw, 20px);
     line-height: 100%;
     text-align: center;
     color: #f83d8e;
@@ -59,40 +69,5 @@
 
 .product-title-link:visited {
     color: inherit; 
-}
-
-@media (max-width: 1024px) {
-    .product-card {
-        max-width: 45vw; /* Приблизно половина екрану мінус відступи */
-        padding: 20px 20px;
-    }
-
-    .card-image {
-        max-width: 200px;
-        height: 200px;
-        padding-top: 30px;
-    }
-}
-
-/* Мобільні телефони — 1 картка */
-@media (max-width: 576px) {
-    .product-card {
-        max-width: 90vw;
-        padding: 16px 16px;
-    }
-
-    .card-image {
-        max-width: 180px;
-        height: 180px;
-        padding-top: 25px;
-    }
-
-    .product-card h3 {
-        font-size: 18px;
-    }
-
-    .product-card p {
-        font-size: 20px;
-    }
 }
 
