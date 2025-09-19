@@ -1,19 +1,20 @@
 .product-container {
-    padding-top: 8rem;
-    width: 1200px;
-    margin: 25px 135px;
+    padding-top: 7.5rem;
+    max-width: 1200px;   
+    margin: 0 auto;   
+    padding-inline: 1rem; 
 }
 
 .product-main {
     display: flex;
-    align-items: start;
-    justify-content: flex-start;
-    margin-left: 4rem;
-    gap: 6rem;
+    flex-wrap: wrap; 
+    align-items: flex-start;
+    justify-content: center; 
+    gap: clamp(1.5rem, 4vw, 5rem);
 }
 
 .product-image {
-    width: 250px;
+    width: clamp(180px, 20vw, 250px);
 }
 
 .product-info {
@@ -21,32 +22,37 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content:space-between;
-    gap: 20px;
+    gap: 15px;
 }
 .product-info h1 {
     font-family: var(--font-family);
     font-weight: 700;
-    font-size: 30px;
+    font-size: clamp(1.5rem, 2vw, 2rem);
     line-height: 100%;
     color: #212529;
 }
 
 .price {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
     color: #683292;
     font-family: var(--font-family);
     font-weight: bold;
 }
 
+.sizes {
+    display: flex;
+    align-items: flex-start;
+}
+
 .sizes .size-btn {
     padding: 5px 10px;
-    margin: 10px 5px;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.8rem;
     cursor: pointer;
     background: transparent;
     border: 1px solid #e8edf1;
     border-radius: 43px;
-    width: 43px;
-    height: 43px;
 }
 
 .size-btn:hover {
@@ -64,14 +70,15 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    width: 100%;
 }
 
 .quantity-btn {
-    width: 32px;
-    height: 32px;
+    width: clamp(24px, 4vw, 32px);
+    height: clamp(24px, 4vw, 32px);
     border: none;
     background: none;
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
     transition: background 0.2s;
 }
@@ -82,13 +89,13 @@
 }
 
 .actions span {
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid #ddd;
-    font-size: 16px;
     user-select: none;
 }
 
@@ -99,4 +106,30 @@
     border: 1px solid #ddd;
     border-radius: 999px;
     overflow: hidden;
+    flex-shrink: 0; 
+}
+
+.actions > button {
+    flex: 1;
+    min-width: 200px;
+}
+
+@media (max-width: 426px) {
+    .product-container {
+        padding-top: 6rem;
+    }
+
+    .actions {
+    flex-direction: column;  
+    align-items: stretch;    /* кнопка розтягується */
+    }
+
+    .actions .quantity-wrap {
+        align-self: center;      
+    }
+
+    .actions > button {
+        width: 100%;             
+    }
+
 }

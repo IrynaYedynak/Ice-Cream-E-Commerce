@@ -68,7 +68,6 @@ function ProductDetail({ product }) {
                 <span>{quantity}</span>
                 <button className="quantity-btn" onClick={handleIncrease}>+</button>
                 </div>
-
                 <MainButton 
                 text='Add to Cart →' 
                 onClick={handleAddToCart}

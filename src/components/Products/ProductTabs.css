@@ -1,12 +1,14 @@
 .tabs {
-    width: 1100px;
-    margin: auto;
+    max-width: 1100px; /* замість width */
+    width: 100%;       /* займає всю доступну ширину */
+    margin: 2rem auto;
+    padding: 0 1rem;  
 }
 
 .tab-buttons {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     border-bottom: 1px solid #ddd;
     padding-bottom: 0.5rem;
 }
@@ -25,5 +27,6 @@
 }
 
 .tab-content {
-    margin: 2rem;
+    margin: 1.5rem 0;
+    font-size: clamp(0.8rem, 2vw, 1rem);
 }

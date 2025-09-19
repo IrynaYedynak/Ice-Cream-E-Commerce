@@ -1,7 +1,8 @@
 .checkout-page {
     display: flex;
     justify-content: space-evenly;
-    padding: 100px;
+    padding: clamp(40px, 5vw, 100px);
+    padding-top: 90px;
     margin: 0 auto;
     background-color: #f9f9fb;
     font-family: var(--font-family);
