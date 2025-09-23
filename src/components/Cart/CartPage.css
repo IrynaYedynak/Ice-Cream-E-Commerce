@@ -1,7 +1,6 @@
 .cart-page {
     display: flex;
     align-items: flex-start;
-    align-items: center;
     gap: 2rem;
     padding: clamp(1rem, 5vw, 7rem);
     padding-top: clamp(6rem, 8vw, 9rem);

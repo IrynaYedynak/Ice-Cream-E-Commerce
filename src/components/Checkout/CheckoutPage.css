@@ -48,14 +48,8 @@
     }
 
     .checkout-summary {
-    order: 1;
-    width: 90%;
-    margin: 0 auto;
-    }
+        width: 90%;
+        max-width: none; 
+        margin: 0 auto;
 }
-
-@media (max-width: 500px) {
-    .checkout-summary {
-        width: 100%;
-    }
 }

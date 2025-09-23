@@ -35,9 +35,10 @@
     color: #f83d8e;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .checkout-summary {
         width: 90%;
+        max-width: none; 
         margin: 0 auto;
-    }
+}
 }
